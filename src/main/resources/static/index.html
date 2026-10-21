@@ -6,7 +6,10 @@
   <meta name="theme-color" content="#f6f7fb">
   <meta name="description" content="Track Java DSA practice, revision and placement preparation.">
   <title>DSA Tracker | Java Placement Prep</title>
-  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Fresh CSS on every load (development only; use styles.css?v=1 in production)
+    document.write('<link rel="stylesheet" href="styles.css?v=' + Date.now() + '">');
+  </script>
 </head>
 
 <body>
@@ -45,33 +48,15 @@
     </aside>
 
     <main class="main-content">
-      <header class="topbar">
-        <div class="breadcrumb">
-          <span>Workspace</span>
-          <span class="breadcrumb-separator">/</span>
-          <strong id="crumbTopic">All Questions</strong>
-        </div>
 
-        <div class="topbar-actions">
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Switch to dark theme"
-            title="Toggle light and dark theme">
-            <span id="themeIcon" aria-hidden="true">☾</span>
-            <span id="themeLabel">Dark mode</span>
-          </button>
-
-          <div class="user-chip">
-            <span class="avatar">S</span>
-            <span class="user-copy">
-              <strong>Java Developer</strong>
-              <small>Placement journey</small>
-            </span>
-          </div>
-        </div>
-      </header>
+      <!-- Hidden stub: app.js looks for these ids, so they stay (nothing is shown) -->
+      <div hidden>
+        <strong id="crumbTopic">All Questions</strong>
+        <button id="themeToggle" type="button">
+          <span id="themeIcon"></span>
+          <span id="themeLabel"></span>
+        </button>
+      </div>
 
       <section class="page-heading">
         <div>
@@ -79,7 +64,11 @@
             <span class="eyebrow-dot"></span>
             YOUR PERSONAL LEARNING SPACE
           </div>
-          <h1>DSA Placement Tracker<span class="heading-period">.</span></h1>
+
+          <h1>
+            <span class="tagline-white">Learn patterns, </span><span class="tagline-green">not the problem</span>
+          </h1>
+
           <p>Build consistency. Strengthen your fundamentals. Get placement-ready.</p>
         </div>
 
@@ -143,7 +132,6 @@
       <section class="content-card">
         <div class="section-header">
           <div>
-            <div class="section-kicker">PRACTICE WORKSPACE</div>
             <h2 id="listTitle">All Questions</h2>
             <p id="listSubtitle">Your questions, progress, and revision in one place.</p>
           </div>
@@ -228,7 +216,7 @@
       </section>
 
       <footer class="page-footer">
-        <span>Built for consistent practice and Learning<span class="footer-heart">♥</span></span>
+        <span>Built for consistent practice and learning <span class="footer-heart">♥</span></span>
         <span>Java <i>·</i> Spring Boot <i>·</i> MySQL</span>
       </footer>
     </main>
